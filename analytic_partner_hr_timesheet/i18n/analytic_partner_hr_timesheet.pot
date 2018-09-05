@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-30 11:23+0000\n"
-"PO-Revision-Date: 2015-08-30 11:23+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,8 +30,12 @@ msgstr ""
 
 #. module: analytic_partner_hr_timesheet
 #: view:hr.analytic.timesheet:analytic_partner_hr_timesheet.hr_timesheet_line_search_partner
-#: field:hr.analytic.timesheet,other_partner_id:0
 msgid "Other Partner"
+msgstr ""
+
+#. module: analytic_partner_hr_timesheet
+#: model:ir.model,name:analytic_partner_hr_timesheet.model_res_partner
+msgid "Partner"
 msgstr ""
 
 #. module: analytic_partner_hr_timesheet
@@ -42,6 +44,18 @@ msgid "Timesheet Activities Number"
 msgstr ""
 
 #. module: analytic_partner_hr_timesheet
+#: model:ir.model,name:analytic_partner_hr_timesheet.model_hr_analytic_timesheet
+msgid "Timesheet Line"
+msgstr ""
+
+#. module: analytic_partner_hr_timesheet
 #: field:res.partner,timesheets:0
 msgid "Timesheet activities"
 msgstr ""
+
+#. module: analytic_partner_hr_timesheet
+#: view:hr.analytic.timesheet:analytic_partner_hr_timesheet.hr_timesheet_line_form_partner
+#: view:hr.analytic.timesheet:analytic_partner_hr_timesheet.hr_timesheet_line_tree_partner
+msgid "on_change_account_id(account_id, user_id)"
+msgstr ""
+
