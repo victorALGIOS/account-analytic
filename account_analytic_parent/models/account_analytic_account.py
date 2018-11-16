@@ -20,6 +20,20 @@ class AccountAnalyticAccount(models.Model):
     child_ids = fields.One2many('account.analytic.account', 'parent_id',
                                 'Child Accounts', copy=True)
 
+    child_complete_ids = fields.Many2many(compute='_child_compute',
+                                          comodel_name='account.analytic.account',
+                                          string="Account Hierarchy")
+
+    @api.multi
+    def _child_compute(self):
+        result = {}
+        for account in self:
+            account_child_ids = account.child_ids
+            result[account.id] = map(lambda x: x.id, [child for child in account.child_ids])
+            account.child_complete_ids = account_child_ids
+        return result
+
+
     @api.multi
     def _compute_debit_credit_balance(self):
         """
